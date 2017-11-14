@@ -80,6 +80,7 @@ public class LoginInfo extends javax.swing.JPanel {
 
         buttonExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         buttonExit.setText("Exit");
+        buttonExit.setBounds(new java.awt.Rectangle(250, 170, 100, 40));
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonExitActionPerformed(evt);

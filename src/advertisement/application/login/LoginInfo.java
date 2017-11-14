@@ -54,9 +54,8 @@ public class LoginInfo extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("User Name :");
-        jLabel1.setBounds(new java.awt.Rectangle(60, 70, 120, 30));
         add(jLabel1);
-        jLabel1.setBounds(60, 70, 120, 20);
+        jLabel1.setBounds(60, 70, 120, 30);
         add(textUserName);
         textUserName.setBounds(180, 70, 170, 30);
 
@@ -69,25 +68,23 @@ public class LoginInfo extends javax.swing.JPanel {
 
         buttonLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         buttonLogin.setText("Login");
-        buttonLogin.setBounds(new java.awt.Rectangle(60, 170, 100, 40));
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLoginActionPerformed(evt);
             }
         });
         add(buttonLogin);
-        buttonLogin.setBounds(60, 170, 73, 40);
+        buttonLogin.setBounds(60, 170, 100, 40);
 
         buttonExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         buttonExit.setText("Exit");
-        buttonExit.setBounds(new java.awt.Rectangle(250, 170, 100, 40));
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonExitActionPerformed(evt);
             }
         });
         add(buttonExit);
-        buttonExit.setBounds(250, 170, 97, 40);
+        buttonExit.setBounds(247, 170, 100, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed

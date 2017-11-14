@@ -6,12 +6,13 @@
 
 package advertisement.application.dashboard;
 
+import advertisement.application.Application;
+import advertisement.application.report.ReportUI;
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import javax.swing.BorderFactory;
-import advertisement.application.Application;
-import advertisement.application.plot.PlotCreateUI;
-import advertisement.application.report.ReportUI;
-import advertisement.application.vevhar.VevharUI;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 
 /**
  *
@@ -39,6 +40,12 @@ public class Dashboard extends javax.swing.JPanel {
     private void build_GUI() {
         this.setBorder(BorderFactory.createTitledBorder(""));
         this.setPreferredSize(new Dimension(1200, 600));
+        ImageIcon image = null;
+        image = new ImageIcon("image/logo.jpg");
+        
+        JLabel label = new JLabel("", image, JLabel.CENTER);
+        imagePanel.add(label, BorderLayout.NORTH);
+        imagePanel.setSize(new Dimension(image.getIconWidth(), image.getIconHeight()));
     }
 
     /**
@@ -50,90 +57,309 @@ public class Dashboard extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fillerLeft = new javax.swing.Box.Filler(new java.awt.Dimension(25, 0), new java.awt.Dimension(25, 0), new java.awt.Dimension(25, 0));
-        fillerUp = new javax.swing.Box.Filler(new java.awt.Dimension(25, 25), new java.awt.Dimension(25, 25), new java.awt.Dimension(25, 25));
-        fillerRight = new javax.swing.Box.Filler(new java.awt.Dimension(25, 0), new java.awt.Dimension(25, 0), new java.awt.Dimension(25, 0));
-        fillerDown = new javax.swing.Box.Filler(new java.awt.Dimension(25, 25), new java.awt.Dimension(25, 25), new java.awt.Dimension(25, 25));
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        dashboard_left = new javax.swing.JPanel();
+        btnEnquiryAdd = new javax.swing.JButton();
+        btnRegAdd = new javax.swing.JButton();
+        btnPayInstallment = new javax.swing.JButton();
+        btnRepEnquiry = new javax.swing.JButton();
+        btnRepReg = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        filler1 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 50), new java.awt.Dimension(0, 50), new java.awt.Dimension(32767, 50));
+        dashboard_right = new javax.swing.JPanel();
+        btnSettingsPass1 = new javax.swing.JButton();
+        btnAddFaculty = new javax.swing.JButton();
+        btnAddCourse = new javax.swing.JButton();
+        btnCourseInfo = new javax.swing.JButton();
+        btnAddBatch = new javax.swing.JButton();
+        btnBatchDetails = new javax.swing.JButton();
+        filler2 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 40), new java.awt.Dimension(0, 40), new java.awt.Dimension(32767, 40));
+        dashboard_center = new javax.swing.JPanel();
+        imagePanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
-        add(fillerLeft, java.awt.BorderLayout.LINE_START);
-        add(fillerUp, java.awt.BorderLayout.PAGE_START);
-        add(fillerRight, java.awt.BorderLayout.LINE_END);
-        add(fillerDown, java.awt.BorderLayout.PAGE_END);
 
-        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
+        dashboard_left.setAutoscrolls(true);
+        dashboard_left.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        dashboard_left.setPreferredSize(new java.awt.Dimension(200, 365));
+        dashboard_left.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 0));
-        jPanel2.setLayout(null);
+        btnEnquiryAdd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnEnquiryAdd.setMnemonic('A');
+        btnEnquiryAdd.setText("Add Enquiry");
+        btnEnquiryAdd.setMaximumSize(new java.awt.Dimension(127, 23));
+        btnEnquiryAdd.setMinimumSize(new java.awt.Dimension(127, 23));
+        btnEnquiryAdd.setPreferredSize(new java.awt.Dimension(127, 23));
+        btnEnquiryAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnquiryAddActionPerformed(evt);
+            }
+        });
+        dashboard_left.add(btnEnquiryAdd);
+        btnEnquiryAdd.setBounds(30, 30, 150, 40);
 
-        jButton1.setText("प्लॉट बनवणे");
+        btnRegAdd.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRegAdd.setMnemonic('D');
+        btnRegAdd.setText("Add Registration");
+        btnRegAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegAddActionPerformed(evt);
+            }
+        });
+        dashboard_left.add(btnRegAdd);
+        btnRegAdd.setBounds(30, 80, 150, 40);
+
+        btnPayInstallment.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnPayInstallment.setMnemonic('M');
+        btnPayInstallment.setText("Pay Installment");
+        btnPayInstallment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPayInstallmentActionPerformed(evt);
+            }
+        });
+        dashboard_left.add(btnPayInstallment);
+        btnPayInstallment.setBounds(30, 140, 150, 40);
+
+        btnRepEnquiry.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRepEnquiry.setMnemonic('E');
+        btnRepEnquiry.setText("Enquiry");
+        btnRepEnquiry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRepEnquiryActionPerformed(evt);
+            }
+        });
+        dashboard_left.add(btnRepEnquiry);
+        btnRepEnquiry.setBounds(30, 200, 150, 40);
+
+        btnRepReg.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnRepReg.setMnemonic('G');
+        btnRepReg.setText("Registration");
+        btnRepReg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRepRegActionPerformed(evt);
+            }
+        });
+        dashboard_left.add(btnRepReg);
+        btnRepReg.setBounds(30, 250, 150, 40);
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton1.setMnemonic('P');
+        jButton1.setText("Payment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1);
-        jButton1.setBounds(50, 140, 106, 29);
+        dashboard_left.add(jButton1);
+        jButton1.setBounds(30, 320, 150, 40);
 
-        jButton2.setText("प्लॉट निवडणे");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        add(dashboard_left, java.awt.BorderLayout.WEST);
+        add(filler1, java.awt.BorderLayout.NORTH);
+
+        dashboard_right.setAlignmentX(5.0F);
+        dashboard_right.setAlignmentY(5.0F);
+        dashboard_right.setAutoscrolls(true);
+        dashboard_right.setPreferredSize(new java.awt.Dimension(200, 576));
+        dashboard_right.setLayout(null);
+
+        btnSettingsPass1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnSettingsPass1.setMnemonic('W');
+        btnSettingsPass1.setText("Change Password");
+        btnSettingsPass1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnSettingsPass1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2);
-        jButton2.setBounds(50, 180, 110, 29);
+        dashboard_right.add(btnSettingsPass1);
+        btnSettingsPass1.setBounds(20, 30, 150, 40);
 
-        jButton3.setText("रिपोर्ट");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnAddFaculty.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAddFaculty.setMnemonic('S');
+        btnAddFaculty.setText("Add Staff");
+        btnAddFaculty.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnAddFacultyActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3);
-        jButton3.setBounds(50, 220, 75, 29);
+        dashboard_right.add(btnAddFaculty);
+        btnAddFaculty.setBounds(20, 100, 150, 40);
 
-        jPanel1.add(jPanel2);
+        btnAddCourse.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAddCourse.setMnemonic('U');
+        btnAddCourse.setText("Add Course");
+        btnAddCourse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddCourseActionPerformed(evt);
+            }
+        });
+        dashboard_right.add(btnAddCourse);
+        btnAddCourse.setBounds(20, 160, 150, 40);
 
-        jPanel3.setBackground(new java.awt.Color(204, 255, 102));
-        jPanel1.add(jPanel3);
+        btnCourseInfo.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnCourseInfo.setMnemonic('N');
+        btnCourseInfo.setText("Course Info");
+        btnCourseInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCourseInfoActionPerformed(evt);
+            }
+        });
+        dashboard_right.add(btnCourseInfo);
+        btnCourseInfo.setBounds(20, 220, 150, 40);
 
-        add(jPanel1, java.awt.BorderLayout.CENTER);
+        btnAddBatch.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnAddBatch.setMnemonic('B');
+        btnAddBatch.setText("Add Batches");
+        btnAddBatch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddBatchActionPerformed(evt);
+            }
+        });
+        dashboard_right.add(btnAddBatch);
+        btnAddBatch.setBounds(20, 280, 150, 40);
+
+        btnBatchDetails.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        btnBatchDetails.setMnemonic('T');
+        btnBatchDetails.setText("Batch Details");
+        btnBatchDetails.setToolTipText("");
+        btnBatchDetails.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBatchDetailsActionPerformed(evt);
+            }
+        });
+        dashboard_right.add(btnBatchDetails);
+        btnBatchDetails.setBounds(20, 340, 150, 40);
+
+        add(dashboard_right, java.awt.BorderLayout.EAST);
+        add(filler2, java.awt.BorderLayout.SOUTH);
+
+        dashboard_center.setLayout(new java.awt.BorderLayout());
+
+        imagePanel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        imagePanel.setPreferredSize(new java.awt.Dimension(478, 78));
+        imagePanel.setLayout(new java.awt.BorderLayout());
+
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Shital Advertising");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel1, java.awt.BorderLayout.NORTH);
+
+        jPanel2.setMinimumSize(new java.awt.Dimension(427, 100));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Agency No : 3040031");
+        jPanel2.add(jLabel2, java.awt.BorderLayout.NORTH);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("PAN : ANAPR63074");
+        jPanel2.add(jLabel3, java.awt.BorderLayout.CENTER);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("GSTIN : 27ANAPR6307G1Z1");
+        jPanel2.add(jLabel4, java.awt.BorderLayout.SOUTH);
+
+        jPanel1.add(jPanel2, java.awt.BorderLayout.SOUTH);
+
+        imagePanel.add(jPanel1, java.awt.BorderLayout.SOUTH);
+
+        dashboard_center.add(imagePanel, java.awt.BorderLayout.CENTER);
+
+        add(dashboard_center, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnEnquiryAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnquiryAddActionPerformed
+
+        Application.getInstance().display_Panel(ReportUI.getInstance());
+        
+    }//GEN-LAST:event_btnEnquiryAddActionPerformed
+
+    private void btnRegAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegAddActionPerformed
+
+        
+
+    }//GEN-LAST:event_btnRegAddActionPerformed
+
+    private void btnPayInstallmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPayInstallmentActionPerformed
+
+        
+
+    }//GEN-LAST:event_btnPayInstallmentActionPerformed
+
+    private void btnRepEnquiryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepEnquiryActionPerformed
+        
+    }//GEN-LAST:event_btnRepEnquiryActionPerformed
+
+    private void btnRepRegActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRepRegActionPerformed
+        
+    }//GEN-LAST:event_btnRepRegActionPerformed
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        Application.getInstance().display_Panel(PlotCreateUI.getInstance());
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Application.getInstance().display_Panel(VevharUI.getInstance());
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void btnAddFacultyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddFacultyActionPerformed
+        
+    }//GEN-LAST:event_btnAddFacultyActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        Application.getInstance().display_Panel(ReportUI.getInstance());
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void btnSettingsPass1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSettingsPass1ActionPerformed
+        
+    }//GEN-LAST:event_btnSettingsPass1ActionPerformed
+
+    private void btnAddCourseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCourseActionPerformed
+        
+    }//GEN-LAST:event_btnAddCourseActionPerformed
+
+    private void btnCourseInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCourseInfoActionPerformed
+        
+
+    }//GEN-LAST:event_btnCourseInfoActionPerformed
+
+    private void btnAddBatchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddBatchActionPerformed
+        
+    }//GEN-LAST:event_btnAddBatchActionPerformed
+
+    private void btnBatchDetailsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatchDetailsActionPerformed
+
+        
+
+    }//GEN-LAST:event_btnBatchDetailsActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.Box.Filler fillerDown;
-    private javax.swing.Box.Filler fillerLeft;
-    private javax.swing.Box.Filler fillerRight;
-    private javax.swing.Box.Filler fillerUp;
+    private javax.swing.JButton btnAddBatch;
+    private javax.swing.JButton btnAddCourse;
+    private javax.swing.JButton btnAddFaculty;
+    private javax.swing.JButton btnBatchDetails;
+    private javax.swing.JButton btnCourseInfo;
+    private javax.swing.JButton btnEnquiryAdd;
+    private javax.swing.JButton btnPayInstallment;
+    private javax.swing.JButton btnRegAdd;
+    private javax.swing.JButton btnRepEnquiry;
+    private javax.swing.JButton btnRepReg;
+    private javax.swing.JButton btnSettingsPass1;
+    private javax.swing.JPanel dashboard_center;
+    private javax.swing.JPanel dashboard_left;
+    private javax.swing.JPanel dashboard_right;
+    private javax.swing.Box.Filler filler1;
+    private javax.swing.Box.Filler filler2;
+    private javax.swing.JPanel imagePanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,7 +52,7 @@ public class LoginInfo extends javax.swing.JPanel {
 
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("User Name :");
         jLabel1.setBounds(new java.awt.Rectangle(60, 70, 120, 30));
         add(jLabel1);
@@ -60,25 +60,26 @@ public class LoginInfo extends javax.swing.JPanel {
         add(textUserName);
         textUserName.setBounds(180, 70, 170, 30);
 
-        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Password   :");
         add(jLabel2);
         jLabel2.setBounds(60, 110, 120, 30);
         add(textPassword);
         textPassword.setBounds(180, 110, 170, 30);
 
+        buttonLogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         buttonLogin.setText("Login");
-        buttonLogin.setBounds(new java.awt.Rectangle(60, 170, 80, 40));
+        buttonLogin.setBounds(new java.awt.Rectangle(60, 170, 100, 40));
         buttonLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLoginActionPerformed(evt);
             }
         });
         add(buttonLogin);
-        buttonLogin.setBounds(60, 170, 79, 40);
+        buttonLogin.setBounds(60, 170, 73, 40);
 
+        buttonExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         buttonExit.setText("Exit");
-        buttonExit.setBounds(new java.awt.Rectangle(250, 170, 80, 40));
         buttonExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonExitActionPerformed(evt);
